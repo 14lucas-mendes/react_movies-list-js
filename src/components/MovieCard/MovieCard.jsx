@@ -21,19 +21,15 @@ export const MovieCard = ({ movie }) => (
 
           <div className="media-content">
             <p className="title is-8" data-cy="MovieTitle">
-              Inception
+              {movie.title}
             </p>
           </div>
         </div>
 
         <div className="content">
-          <p data-cy="MovieDescription">
-            Follows the lives of eight very different couples in dealing with
-            their love lives in various loosely interrelated tales all set
-            during a frantic month before Christmas in London, England.
-          </p>
+          <p data-cy="MovieDescription">{movie.description}</p>
 
-          <a href="https://www.imdb.com/title/tt1375666" data-cy="MovieLink">
+          <a href={movie.imdbUrl} data-cy="MovieLink">
             IMDB
           </a>
         </div>
